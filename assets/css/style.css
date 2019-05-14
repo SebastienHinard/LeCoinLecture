@@ -30,3 +30,19 @@
 .tx5{
     color: #9DC7C8
 }
+
+
+/* css SEB */
+.titrePrincipal{
+font-family: 'Nanum Pen Script', cursive;
+}
+.cartLength{
+    padding-right: 3px;
+    padding-left: 3px;
+    position: relative;
+    top: -10px;
+    left: 5px;
+    border-radius: 20px;
+    color: white;
+    background-color: red;
+}

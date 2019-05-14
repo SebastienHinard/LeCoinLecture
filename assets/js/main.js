@@ -1,9 +1,19 @@
 //declaration de l'app
 var coinLectureApp = angular.module('coinLectureApp',['ngRoute']);
+coinLectureApp.run(function($rootScope, $http, $rootScope){
+    //je récupère le JSON
+    $http.get("assets/json/json.json")
+        .then(function (response) {
+            // reponse.data renvoie le contenu de json.json dans la variable marques
+            $rootScope.books = response.data;
+        });
+    //je créé mon tableau cartList (panier)
+    $rootScope.cartList=[{"index":"O","quantite":"1"},{"index":"4","quantite":"5"},{"index":"9","quantite":"2"}];
+});
 //config des routes
 coinLectureApp.config(function($routeProvider){
     $routeProvider
-    .when('/home',{
+    .when('/home:cat?',{
         controller: 'homeController',
         templateUrl : 'assets/partials/home.html'
     })
@@ -16,27 +26,11 @@ coinLectureApp.config(function($routeProvider){
         controller: 'cartController',
         templateUrl: 'assets/partials/cart.html'
     })
-    .when('/product',{
+    .when('/product/:id?',{
         controller: 'productController',
         templateUrl: 'assets/partials/product.html'
     })
     .otherwise({
         redirectTo: '/home'
     });
-});
-//controller home
-coinLectureApp.controller('homeController',function(){
-
-})
-//controller category
-.controller('categoryController',function(){
-
-})
-//controller cartController
-.controller('cartController',function(){
-
-})
-//controller productController
-.controller('productController',function(){
-
 });
