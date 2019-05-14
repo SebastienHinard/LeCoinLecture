@@ -24,19 +24,3 @@ coinLectureApp.config(function($routeProvider){
         redirectTo: '/home'
     });
 });
-//controller home
-coinLectureApp.controller('homeController',function(){
-
-})
-//controller category
-.controller('categoryController',function(){
-
-})
-//controller cartController
-.controller('cartController',function(){
-
-})
-//controller productController
-.controller('productController',function(){
-
-});
