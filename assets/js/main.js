@@ -1,5 +1,8 @@
 //declaration de l'app
 var coinLectureApp = angular.module('coinLectureApp',['ngRoute']);
+coinLectureApp.run(function($rootScope){
+    // $rootScope.books;
+});
 //config des routes
 coinLectureApp.config(function($routeProvider){
     $routeProvider
@@ -16,27 +19,11 @@ coinLectureApp.config(function($routeProvider){
         controller: 'cartController',
         templateUrl: 'assets/partials/cart.html'
     })
-    .when('/product',{
+    .when('/product/:id?',{
         controller: 'productController',
         templateUrl: 'assets/partials/product.html'
     })
     .otherwise({
         redirectTo: '/home'
     });
-});
-//controller home
-coinLectureApp.controller('homeController',function(){
-
-})
-//controller category
-.controller('categoryController',function(){
-
-})
-//controller cartController
-.controller('cartController',function(){
-
-})
-//controller productController
-.controller('productController',function(){
-
 });

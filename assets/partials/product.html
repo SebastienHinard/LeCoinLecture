@@ -1,2 +1,25 @@
 <!-- cette vue présente le détail du produit sélectionné -->
-<p>product</p>
+<div ng-controller="productController" class=" rounded bg2 my-2 p-2">
+    <div class=" rounded bg-light p-2">
+        <h1 class="tx3 p-2 taille">Product</h1>
+        <!-- Contenu du product  -->
+        <div class="row">
+            <div class="col-12 col-md-6 col-lg-6 my-2">
+                <div class="card m-2 h-100">
+                  <img class="card-img-top" src={{LienPhoto}} alt="Card image cap">
+                  <div class="card-body">
+                    <h4 class="card-title">Titre: {{Nom}}</h4>
+                    <p class="card-text">
+                        ID: {{ID}} <br>
+                        Auteur: {{Auteur}} <br>
+                        Prix: {{Prix}}€ <br>
+                        Categorie: {{Categorie}} <br>
+                        Description: {{Description}}               
+                    </p>
+                    <a href="#!" class="btn btn-primary">Ajouter au panier</a>
+                  </div>
+                </div>
+              </div>
+        </div>
+    </div>
+</div>
