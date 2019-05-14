@@ -1,18 +1,20 @@
 <!-- la vue home présente tous les produits -->
-<div ng-controller="homeController" class=" rounded bg2 my-2 p-2">
-  <div class=" rounded bg-light p-2">
+<div ng-controller="homeController" class="rounded my-4 bg2 p-2">
+  <div class="rounded bg-light p-2">
     <h1 class="tx3 p-2 taille">Home</h1>
     <!-- Contenu du home  -->
     <div class="row">
       <div ng-repeat="content in books" class="col-12 col-md-4 col-lg-3 my-2">
         <div class="card m-2 h-100">
-          <img class="card-img-top" src={{content.LienPhoto}} alt="Card image cap">
+          <img class="redimention card-img-top" src={{content.LienPhoto}} alt="Card image cap">
           <div class="card-body">
-            <h4 class="card-title">{{content.Nom}}</h4>
-            <p class="card-text">
-              {{content.Prix}}€
-            </p>
-            <a href="#!" class="btn btn-primary">Payer</a>
+            <h5 class="card-title">{{content.Nom}}</h5>
+          <p class="card-text">Auteur :  {{content.Auteur}}</p>
+          <p>Editeur :  {{content.Editeur}}</p>
+              <p>{{content.Prix}}€</p>
+              <div class="float-right">
+              <a href="#!" class="btnTaille btn btn-primary">Ajouter au panier</a>
+              </div>
           </div>
         </div>
       </div>
