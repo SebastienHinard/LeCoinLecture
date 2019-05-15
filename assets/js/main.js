@@ -10,6 +10,7 @@ coinLectureApp.run(function($rootScope, $http, $rootScope){
     //je créé mon tableau cartList (panier)
     $rootScope.cartList=[];
     $rootScope.articleCount = 0;
+    $rootScope.cartList=[];
 });
 //config des routes
 coinLectureApp.config(function($routeProvider){
