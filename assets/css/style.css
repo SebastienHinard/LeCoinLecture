@@ -30,6 +30,13 @@
 .tx5{
     color: #9DC7C8
 }
+.tx6{
+  color: #28A745
+}
+.tx7{
+  color: #FFBB12
+}
+
 /* css SEB */
 .titrePrincipal{
 font-family: 'Nanum Pen Script', cursive;
@@ -63,6 +70,10 @@ main{
 .auteur {
   font-size: 15px;
 }
+.modalSize {
+  font-size: 15px;
+  font-weight: bold;
+}
 .gray{
   background-color:#CDCDCD;
 }
@@ -74,4 +85,7 @@ main{
   font-size:12px;
   width: 120px;
   height: 34px;
+}
+.test{
+  border: none;
 }

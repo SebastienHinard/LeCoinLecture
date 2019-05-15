@@ -8,4 +8,8 @@ coinLectureApp.controller('productController',function($scope, $routeParams, $ro
             $scope.LienPhoto = $rootScope.books[$scope.index].LienPhoto;
             $scope.Categorie = $rootScope.books[$scope.index].Categorie;
             $scope.Description = $rootScope.books[$scope.index].Description;
+            $scope.Rating = $rootScope.books[$scope.index].Rating;
+            $scope.NrPages = $rootScope.books[$scope.index].NrPages;
+            $scope.Format = $rootScope.books[$scope.index].Format;
+            $scope.Code = $rootScope.books[$scope.index].Code;
 });
