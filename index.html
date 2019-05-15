@@ -15,7 +15,7 @@
   <title></title>
 </head>
 
-<body>
+<body class="bg5">
   <!-- container Bootstrap -->
   <div class="container">
     <!-- header -->
@@ -69,8 +69,8 @@
           </div>
         </div>
       </nav>
-      <form class="d-flex flex justify-content-start pb-2">
-        <input class="form-control d-block w-50 h-50 p-1 ml-2" type="text" placeholder="Search" aria-label="Search"
+      <form class="d-flex flex justify-content-center pb-2">
+        <input class="form-control d-block w-50 h-50 p-1" type="text" placeholder="Search" aria-label="Search"
           ng-model="searchContent">
         <a href="#!home/{{searchContent}}"><i class="fas fa-search fa-lg text-white p-2"></i></a>
       </form>
@@ -82,14 +82,17 @@
     </main>
     <!-- footer -->
     <footer class="bg2 text-white">
-      <ul class="nav justify-content-around">
+      <ul class="nav justify-content-between">
         <li class="nav-item">
           <a class="nav-link text-white" href="#!">Mentions légales</a>
         </li>
         <li class="nav-item">
+          <a class="nav-link text-white" href="#!">Conditions générales de vente</a>
+        </li>
+        <li class="nav-item">
           <a class="nav-link text-white" href="#!">Nous contacter</a>
         </li>
-        <li class="nav-item d-flex align-items-center justify-items-around">
+        <li class="nav-item d-flex align-items-center justify-items-around mr-2">
           <a class="text-white mx-1" href="#!"><i class="fab fa-facebook-square fa-2x"></i></a>
           <a class="text-white mx-1" href="#!"><i class="fab fa-instagram fa-2x"></i></a>
           <a class="text-white mx-1" href="#!"><i class="fab fa-twitter-square fa-2x"></i></a>

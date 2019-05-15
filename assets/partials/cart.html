@@ -1,6 +1,6 @@
 <!-- cette vue affiche le panier -->
-<div class=" rounded bg2 my-4 p-2">
-    <div class=" rounded bg-light p-2">
+<div class="bg2 p-2">
+    <div class="rounded bg-light p-2">
         <h2 class="p-2 text-center">Votre panier:</h2>
         <hr>
         <div ng-hide="cartList.length" calss="m-5 p-5">
@@ -41,13 +41,14 @@
 <!-- modale pour panier validé -->
 <div class="validatedCart modal fade bd-example-modal-xl" tabindex="-1" role="dialog" aria-labelledby="myHugeModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-xl">
-        <div class="modal-content p-5 shadow">
-            <h3 class="text-center">Votre panier a bien été validé.</h3>
-            <p class="text-center">Merci de vos achats.</p>
-            <hr class="w-50">
-            <h4 class="text-center">Récapitulatif de votre commande:</h4>
-            <hr class="w-50">
-
+        <div class="modal-content shadow rounded">
+            <div class="bg2 text-white p-4">
+                <h3 class="text-center">Votre panier a bien été validé.</h3>
+                <p class="text-center">Merci de vos achats.</p>
+            </div>
+            <div class="p-4">
+                <h4 class="text-center">Récapitulatif de votre commande:</h4>
+                <hr class="w-50">
                 <div class="w-75">
                     <div class="row p-2">
                         <div class="col-4 lead">Produit:</div>
@@ -60,8 +61,8 @@
                         <div class="col-4"><small>{{books[x.id].Prix | euroFormat }}</small></div>
                     </div>
                 </div>
-
-            <p class="text-right lead mt-5">Prix total: <span class="font-weight-bold">{{totalPrice() | euroFormat }}</span></p>
+                <p class="text-right lead mt-5">Prix total: <span class="font-weight-bold">{{totalPrice() | euroFormat }}</span></p>
+            </div>
         </div>
     </div>
 </div>

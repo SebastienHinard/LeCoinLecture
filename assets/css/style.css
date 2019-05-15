@@ -54,9 +54,6 @@ font-family: 'Nanum Pen Script', cursive;
     font-weight: bold;
     box-shadow: 4px 4px 12px #3B0D11;
 }
-main{
-    min-height: calc(100vh - 130px);
-}
 /* css Andreea */
 /* Style the tab */
 .tab {
@@ -88,4 +85,24 @@ main{
 }
 .test{
   border: none;
+}
+.articleCard p, .articleCard h5{
+    white-space: nowrap;
+    width: inherit;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.articleCard img{
+    max-height: 200px;
+    max-width: 180px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.articleCard{
+    transition: .2s ease-in-out;
+}
+.articleCard:hover{
+    cursor: pointer;
+    opacity: .8;
+    transform: scale(1.02);
 }
