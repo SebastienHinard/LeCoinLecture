@@ -8,7 +8,7 @@ coinLectureApp.run(function($rootScope, $http, $rootScope){
             $rootScope.books = response.data;
         });
     //je créé mon tableau cartList (panier)
-    $rootScope.cartList=[{"index":"O","quantite":"1"},{"index":"4","quantite":"5"},{"index":"9","quantite":"2"}];
+    $rootScope.cartList=[];
 });
 //config des routes
 coinLectureApp.config(function($routeProvider){
