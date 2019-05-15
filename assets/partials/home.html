@@ -10,10 +10,10 @@
           <div class="card-body">
             <h5 class="card-title">{{content.Nom}}</h5>
           <p class="card-text">Auteur :  {{content.Auteur}}</p>
-          <p>Editeur :  {{content.Editeur}}</p>
-              <p>{{content.Prix}}€</p>
+          <p>Editeur :  {{content.Categorie}}</p>
+              <p>{{content.Prix | euroFormat}}</p>
               <div class="float-right">
-              <a href="#!" class="btn btn-primary">Ajouter au panier</a>
+              <button ng-click="ajoutPanier($index)" class="btn btn-primary">Ajouter au panier</button>
               </div>
           </div>
         </div>
