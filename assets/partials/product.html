@@ -1,2 +1,76 @@
 <!-- cette vue présente le détail du produit sélectionné -->
-<p>product</p>
+<div ng-controller="productController" class=" rounded bg2 my-2 p-2">
+  <div class=" rounded bg-light p-2">
+    <!--Contenu du product  -->
+    <h1 class="tx3 p-2"></h1>
+    <div class="card mb-3" style="max-width: 1080px;">
+      <div class="row no-gutters">
+        <div class="col-md-3">
+          <img class="card-img p-2" src={{LienPhoto}} alt="...">
+        </div>
+        <div class="col-md-6">
+          <div class="card-body">
+            <p class="titre card-title font-weight-bold">{{Nom}}</p>
+            <p class="auteur card-title text-primary">de {{Auteur}}</p>
+            <hr>
+            <ul style="list-style-type:none;">
+              <li class="font-weight-bold">Prix: <span class="font-weight-normal">{{Prix}}€ </span></li>
+              <li class="font-weight-bold">Categorie: <span class="font-weight-normal">{{Categorie}} </span></li>
+              <li class="font-weight-bold">Format: <span class="font-weight-normal">20cm x 26cm </span></li>
+              <!--  ////////// Il faut remplir le json avec les informations manquantes -->
+              <li class="font-weight-bold">Nombre de pages: <span class="font-weight-normal">56 </span></li>
+              <!--  ////////// Il faut remplir le json avec les informations manquantes -->
+            </ul>
+          </div>
+        </div>
+        <div class="card col-md-3 p-3">
+          <a href="#!" class="btn btn-primary">Ajouter au panier</a></p>
+          <hr>
+          <a href="#!" class="btn btn-primary">Ajouter à votre liste</a></p>
+        </div>
+      </div>
+    </div>
+    <!-- Card 3 avantages -->
+    <div class="card-deck p-2">
+      <div class="card gray">
+        <div class="card-body">
+          <p class="card-text"><span><i class="fas fa-truck"></i></span> Livraison gratuite<br><small>en relais colis toute l'année</small></p>
+        </div>
+      </div>
+      <div class="card gray">
+        <div class="card-body">
+          <p class="card-text"><span><i class="fas fa-undo-alt"></i></span> Retour gratuit<br><small>vous avez 30 jours pour changer d’avis</small></p>
+        </div>
+      </div>
+      <div class="card gray">
+        <div class="card-body">
+          <p class="card-text"><span><i class="fas fa-crown"></span></i> Points de fidelité<br><small>avec la carte LeCoinLecture</small></p>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- Navtabs pour Description et Détails -->
+  <ul class="nav nav-tabs">
+      <li class="nav-item">
+        <a class="nav-link active" ng-click="mytext1=true ; mytext2=false">Résumé</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" ng-click="mytext1=false ; mytext2=true">Détails</a>
+      </li>
+    </ul>
+  <!-- Text Description -->
+  <div class="my-2 p-2" ng-show="mytext1" ng-init="mytext1=true">{{Description}}</div>
+  <!-- Text Détails -->
+  <div class="my-2 p-2" ng-show="mytext2" ng-init="mytext2=false">
+    <p class="card-text">
+        <p class="font-weight-bold">Auteur: <span class="font-weight-normal">{{Auteur}}</span><p>
+        <p class="font-weight-bold">Prix: <span class="font-weight-normal">{{Prix}}€ </span><p>
+        <p class="font-weight-bold">Categorie: <span class="font-weight-normal">{{Categorie}} </span><p>
+        <p class="font-weight-bold">Format: <span class="font-weight-normal">20cm x 26cm </span><p>
+        <!--  ////////// Il faut remplir le json avec les informations manquantes -->
+        <p class="font-weight-bold">Nombre de pages: <span class="font-weight-normal">56 </span><p>
+        <!--  ////////// Il faut remplir le json avec les informations manquantes -->
+    </p>
+  </div>
+</div>
+</div>

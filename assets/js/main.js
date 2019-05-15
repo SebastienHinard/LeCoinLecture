@@ -34,3 +34,4 @@ coinLectureApp.config(function($routeProvider){
         redirectTo: '/home'
     });
 });
+
