@@ -12,7 +12,7 @@ coinLectureApp.controller('homeController', function ($rootScope,$scope, $http, 
         // Si l'id de l'article parcouru correspond a celui qu'on va ajouter au tableau
         if($rootScope.cartList[i].id == ID){
           // On modifie seulement sa quantitée
-          $rootScope.cartList[i].quantité++;
+          $rootScope.cartList[i].quantite++;
           // On indique qu'il ne faut pas le rajouter à la liste
           articlePush = false;
         }

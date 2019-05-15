@@ -1,19 +1,24 @@
 <!-- cette vue affiche le panier -->
 <div class=" rounded bg2 my-4 p-2">
     <div class=" rounded bg-light p-2">
-        <h2 class="p-2">Votre panier:</h2>
+        <h2 class="p-2 text-center">Votre panier:</h2>
         <hr>
+        <div ng-hide="cartList.length" calss="m-5 p-5">
+            <p class="text-center">Votre Panier est vide</p>
+        </div>
         <!-- mise en page du panier -->
-        <div class="row p-2">
-            <div class="col-3 lead">Produit:</div>
-            <div class="col-3 lead">Quantité:</div>
-            <div class="col-3 lead">Prix:</div>
+        <div ng-show="cartList.length">
+            <div class="row p-2">
+                <div class="col-3 lead">Produit:</div>
+                <div class="col-3 lead">Quantité:</div>
+                <div class="col-3 lead">Prix:</div>
+            </div>
         </div>
         <!-- affichage des articles du panier -->
         <div ng-repeat="x in cartList" class="row p-2">
             <div class="col-3"><a href="#!product/{{x.id}}" style="color:black;">{{ books[x.id].Nom }}</a></div>
             <div class="col-3">{{ x.quantite }}</div>
-            <div class="col-3">{{books[x.id].Prix | currency : '€'}}</div>
+            <div class="col-3">{{books[x.id].Prix | euroFormat }}</div>
             <!-- boutons ajouter/retirer -->
             <div class="col-3">
                 <button ng-click="removeQuantity($index)" class="btn btn-secondary py-0">-</button>
@@ -22,11 +27,13 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-3 offset-6 lead">Total:{{prixTotal}}</div>
+            <div ng-show="cartList.length" class="col-3 offset-6 lead">
+                <p>Total: <span class="font-weight-bold">{{totalPrice() | euroFormat }}</span></p>
+            </div>
         </div>
         <div class="d-flex justify-content-end">
-            <a href="#!home" class="btn btn-secondary shadow mx-1">Continuez vos achats</a>
-            <a href="" class="btn btn-success shadow mx-1">Confirmez vos achats</a>
+            <a href="#!home" class="btn btn-secondary shadow mx-1">Continuer vos achats</a>
+            <a ng-show="cartList.length" href="" class="btn btn-success shadow mx-1">Valider votre panier</a>
         </div>
     </div>
 </div>
