@@ -14,7 +14,7 @@ coinLectureApp.run(function($rootScope, $http, $rootScope){
 //config des routes
 coinLectureApp.config(function($routeProvider){
     $routeProvider
-    .when('/home:cat?',{
+    .when('/home/:cat?',{
         controller: 'homeController',
         templateUrl : 'assets/partials/home.html'
     })

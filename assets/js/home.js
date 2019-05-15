@@ -1,6 +1,7 @@
 //controller home
 coinLectureApp.controller('homeController', function ($rootScope,$scope, $http, $routeParams) {
   $scope.category = $routeParams.cat;
+  console.log($scope.category);
   // Lorsque le boutton appelle la fct ajoutPanier
     $scope.ajoutPanier = function(ID) {
         $rootScope.articleCount++;
