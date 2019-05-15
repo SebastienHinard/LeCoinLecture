@@ -1,32 +1,16 @@
-/* codes couleur pour le background */
-.bg1{
-    background-color: #3B0D11
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
 }
-.bg2{
-    background-color: #6A3937
+.titre {
+  font-size: 20px;
 }
-.bg3{
-    background-color: #706563
+.auteur {
+  font-size: 15px;
 }
-.bg4{
-    background-color: #748386
-}
-.bg5{
-    background-color: #9DC7C8
-}
-/* codes couleur pour le texte */
-.tx1{
-    color: #3B0D11
-}
-.tx2{
-    color: #6A3937
-}
-.tx3{
-    color: #706563
-}
-.tx4{
-    color: #748386
-}
-.tx5{
-    color: #9DC7C8
+
+.gray{
+  background-color:#CDCDCD;
 }
