@@ -53,7 +53,7 @@
                     </ul>
                 </div>
                 <div>
-                    <ul class="navbar-nav">
+                    <ul class="navbar-nav d-flex justify-content-between">
                         <li class="nav-item">
                             <a class="nav-link text-white" href="#!cart">Votre panier<i class="fas fa-shopping-cart fa-lg ml-1"></i><small ng-show="cartList.length >0" class="cartLength">{{cartList.length}}</small></a>
                         </li>
@@ -61,7 +61,10 @@
                 </div>
                 </div>
             </nav>
-
+            <form class="d-flex flex justify-content-start pb-2">
+                <input class="form-control d-block w-50 h-50 p-1 ml-2" type="text" placeholder="Search" aria-label="Search" ng-model="searchContent">
+                <a href="#!home:{{searchContent}}"><i class="fas fa-search fa-lg text-white p-2"></i></a>
+            </form>
         </header>
 
         <!-- main -->
