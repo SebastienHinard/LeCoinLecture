@@ -9,11 +9,12 @@ coinLectureApp.run(function($rootScope, $http, $rootScope){
         });
     //je créé mon tableau cartList (panier)
     $rootScope.cartList=[];
+    $rootScope.articleCount = 0;
 });
 //config des routes
 coinLectureApp.config(function($routeProvider){
     $routeProvider
-    .when('/home:cat?',{
+    .when('/home/:cat?',{
         controller: 'homeController',
         templateUrl : 'assets/partials/home.html'
     })
@@ -34,4 +35,8 @@ coinLectureApp.config(function($routeProvider){
         redirectTo: '/home'
     });
 });
-
+coinLectureApp.filter('euroFormat', function () {
+    return function (input) {
+        return input+' \u20AC';
+    };
+});
