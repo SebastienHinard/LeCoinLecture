@@ -2,114 +2,108 @@
 <html lang="fr" ng-app="coinLectureApp">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-  <link rel="stylesheet" href="assets/css/style.css">
-  <link href="https://fonts.googleapis.com/css?family=Nanum+Pen+Script|Roboto|Shrikhand" rel="stylesheet">
-  <script src="assets/js/angular.js"></script>
-  <script src="assets/js/angular-route.js"></script>
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Pen+Script|Roboto|Shrikhand" rel="stylesheet">
+    <script src="assets/js/angular.js"></script>
+    <script src="assets/js/angular-route.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
     integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-  <title></title>
+    <title></title>
 </head>
 
 <body class="bg5">
-  <!-- container Bootstrap -->
-  <div class="container">
-    <!-- header -->
-    <header class="sticky-top bg2">
-      <!-- navbar -->
-      <div class="d-none d-lg-block bg2 text-white text-center">
-        <h1 class="titrePrincipal display-2"><i class="fas fa-book text-white"></i>Le coin Lecture...</h1>
-      </div>
-      <nav class="navbar navbar-expand-lg navbar-dark">
-        <a class="titrePrincipal navbar-brand d-lg-none" href="#!/" style="font-size: 32px;"><i
-            class="fas fa-book d-none d-md-inline"></i>Le Coin Lecture...</a>
-        <div>
-          <a class="mx-3 text-white d-lg-none" href="#!cart"><i class="fas fa-shopping-cart fa-lg ml-1"></i><small
-              ng-show="articleCount > 0" class="cartLength">{{articleCount}}</small></a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-        </div>
-        <div class="collapse navbar-collapse d-lg-flex justify-content-between" id="navbarSupportedContent">
-          <div>
-            <ul class="navbar-nav">
-              <li class="nav-item active">
-                <a class="nav-link" href="#!home">Accueil <span class="sr-only">(current)</span></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#!home/Livres pour enfants">Livres pour enfants</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#!home/Cuisine et Vins">Cuisine et vins</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#!home/Romans et Littérature">Romans et Littérature</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#!home/Science">Sciences</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#!home/Tourisme et Voyages">Tourisme et voyages</a>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <ul class="navbar-nav d-flex justify-content-between">
-              <li class="nav-item">
-                <a class="nav-link text-white" href="#!cart">Votre panier<i
-                    class="fas fa-shopping-cart fa-lg ml-1"></i><small ng-show="articleCount > 0"
-                    class="cartLength">{{articleCount}}</small></a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-      <form class="d-flex flex justify-content-center pb-2">
-        <input class="form-control d-block w-50 h-50 p-1" type="text" placeholder="Search" aria-label="Search"
-          ng-model="searchContent">
-        <a href="#!home/{{searchContent}}"><i class="fas fa-search fa-lg text-white p-2"></i></a>
-      </form>
-    </header>
+    <!-- container Bootstrap -->
+    <div class="container">
+        <!-- header -->
+        <header class="sticky-top bg2">
+            <div class="d-none d-lg-block bg2 text-white text-center pb-0">
+                <h1 class="titrePrincipal display-2"><i class="fas fa-book text-white"></i>Le coin Lecture...</h1>
+            </div>
+            <!-- navbar -->
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <a class="titrePrincipal navbar-brand d-lg-none" href="#!/" style="font-size: 32px;"><i class="fas fa-book d-none d-md-inline"></i>Le Coin Lecture...</a>
+                <div>
+                    <a class="mx-3 text-white d-lg-none" href="#!cart"><i class="fas fa-shopping-cart fa-lg ml-1"></i><small ng-show="articleCount > 0" class="cartLength">{{articleCount}}</small></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse d-lg-flex justify-content-between" id="navbarSupportedContent">
+                    <div>
+                        <ul class="navbar-nav">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#!home">Accueil <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#!home/Livres pour enfants">Livres pour enfants</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#!home/Cuisine et Vins">Cuisine et vins</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#!home/Romans et Littérature">Romans et Littérature</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#!home/Science">Sciences</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#!home/Tourisme et Voyages">Tourisme et voyages</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <ul class="navbar-nav d-flex justify-content-between">
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="#!cart">Votre panier<i class="fas fa-shopping-cart fa-lg ml-1"></i><small ng-show="articleCount > 0" class="cartLength">{{articleCount}}</small></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <form class="d-flex flex justify-content-center pb-2">
+                <input class="form-control d-block w-50 h-50 p-1" type="text" placeholder="Search" aria-label="Search" ng-model="searchContent">
+                <a href="#!home/{{searchContent}}"><i class="fas fa-search fa-lg text-white p-2"></i></a>
+            </form>
+        </header>
 
-    <!-- main -->
-    <main ng-view>
+        <!-- main -->
+        <main ng-view>
 
-    </main>
-    <!-- footer -->
-    <footer class="bg2 text-white">
-      <ul class="nav justify-content-between">
-        <li class="nav-item">
-          <a class="nav-link text-white" href="#!">Mentions légales</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-white" href="#!">Conditions générales de vente</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-white" href="#!">Nous contacter</a>
-        </li>
-        <li class="nav-item d-flex align-items-center justify-items-around mr-2">
-          <a class="text-white mx-1" href="#!"><i class="fab fa-facebook-square fa-2x"></i></a>
-          <a class="text-white mx-1" href="#!"><i class="fab fa-instagram fa-2x"></i></a>
-          <a class="text-white mx-1" href="#!"><i class="fab fa-twitter-square fa-2x"></i></a>
-        </li>
-      </ul>
-    </footer>
-  </div>
-  <!-- scripts JQuery Popper et Bootstrap-->
-  <script src="assets/js/jquery-3.4.0.min.js"></script>
-  <script src="assets/js/popper.min.js"></script>
-  <script src="assets/js/bootstrap.min.js"></script>
-  <!-- mon script principal -->
-  <script src="assets/js/main.js"></script>
-  <script src="assets/js/home.js"></script>
-  <script src="assets/js/cart.js"></script>
-  <script src="assets/js/category.js"></script>
-  <script src="assets/js/product.js"></script>
+        </main>
+        <!-- footer -->
+        <footer class="bg2 text-white">
+            <ul class="nav justify-content-between">
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#!">Mentions légales</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#!">Conditions générales de vente</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#!">Nous contacter</a>
+                </li>
+                <li class="nav-item d-flex align-items-center justify-items-around mr-2">
+                    <a class="text-white mx-1" href="#!"><i class="fab fa-facebook-square fa-2x"></i></a>
+                    <a class="text-white mx-1" href="#!"><i class="fab fa-instagram fa-2x"></i></a>
+                    <a class="text-white mx-1" href="#!"><i class="fab fa-twitter-square fa-2x"></i></a>
+                </li>
+            </ul>
+        </footer>
+    </div>
+    <!-- scripts JQuery Popper et Bootstrap-->
+    <script src="assets/js/jquery-3.4.0.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!-- mon script principal -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/home.js"></script>
+    <script src="assets/js/cart.js"></script>
+    <script src="assets/js/category.js"></script>
+    <script src="assets/js/product.js"></script>
 </body>
 
 </html>
