@@ -2,12 +2,12 @@
 <div ng-controller="productController" class=" rounded bg2 my-2 p-2">
   <div class=" rounded bg-light p-2">
     <!--Contenu du product  -->
-    <h1 class="tx3 p-2"></h1>
+    <h1 class="tx3 p-2 taille">Détails</h1>
     <div class="mb-3" style="max-width: 1080px;">
       <div class="row no-gutters">
         <div class="col-12 offset-md-1 col-md-3">
           <div class="card">
-            <img class="card-img p-2" src={{LienPhoto}} alt="...">
+            <img class="card-img p-2" src={{LienPhoto}} alt="bla">
           </div>
         </div>
         <div class="col-12 offset-md-1 col-md-6">
@@ -16,15 +16,15 @@
               <p class="titre card-title font-weight-bold">{{Nom}}</p>
               <p class="auteur card-title text-primary">de {{Auteur}}</p>
               <hr>
-              <p class="text-primary"><i class="fas fa-star tx7"></i><i class="fas fa-star tx7"></i><i
+              <p class="text-primary"><i id="1" class="fas fa-star tx7"></i><i class="fas fa-star tx7"></i><i
                   class="fas fa-star tx7"></i><i class="fas fa-star tx7"></i><i class="fas fa-star tx5"></i></span>
                 {{Rating}} étoiles</p>
-              <p class="font-weight-bold taille">{{Prix}}€ </p>
+              <p class="font-weight-bold taille">{{Prix | euroFormat}} </p>
             </div>
             <hr>
             <div class="d-flex">
               <div class="p-2">
-                <!-- Modal -->
+                <!-- Modal pour ajouter au panier dans la view Détails-->
                 <!-- Button trigger modal Ajouter au panier-->
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal3">Ajouter
                   au panier</button>
@@ -57,9 +57,8 @@
                         </div>
                       </div>
                       <div class="modal-footer">
-                        <button type="button" class="btn btn-success" data-dismiss="modal">Je continue mon
-                          shopping</button>
-                        <button type="button" class="btn btn-danger" data-dismiss="modal">J'accède à mon panier</button>
+                        <button ng-click="gotoUrl('/cart/')" type="button" class="btn btn-primary" data-dismiss="modal">J'accède à mon panier</button>
+                        <button ng-click="gotoUrl('/home/')" type="button" class="btn btn-success" data-dismiss="modal">Continuez vos achats</button>
                       </div>
                     </div>
                   </div>
@@ -67,12 +66,11 @@
               </div>
               <div class="p-2">
                 <!-- Button Je continue mon shopping -->
-                <button type="button" class="btn btn-success" data-dismiss="modal">Je continue mon shopping</button>
+                <button ng-click="gotoUrl('/home/')" type="button" class="btn btn-success" data-dismiss="modal">Continuez vos achats</button>
               </div>
             </div>
           </div>
         </div>
-
       </div>
     </div>
     <!-- Card 3 avantages -->
@@ -118,7 +116,7 @@
             <p class="font-weight-bold mb-0">Évaluation: <i class="fas fa-star tx7"></i><i
                 class="fas fa-star tx7"></i><i class="fas fa-star tx7"></i><i class="fas fa-star tx7"></i><i
                 class="fas fa-star tx5"></i></span></p>
-            <p class="font-weight-bold mb-0">Prix: <span class="font-weight-normal">{{Prix}} </span></p>
+            <p class="font-weight-bold mb-0">Prix: <span class="font-weight-normal">{{Prix | euroFormat}} </span></p>
             <p class="font-weight-bold mb-0">Categorie: <span class="font-weight-normal">{{Categorie}} </span></p>
             <p class="font-weight-bold mb-0">Format: <span class="font-weight-normal">{{Format}}</span></p>
             <p class="font-weight-bold mb-0">Nombre de pages: <span class="font-weight-normal">{{NrPages}} pages </span>
