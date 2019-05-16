@@ -89,7 +89,7 @@
                     </div>
                     <div class="card gray">
                         <div class="card-body">
-                            <p class="card-text"><span><i class="fas fa-crown"></span></i> Points de fidelité<br><small>avec la carte
+                            <p class="card-text"><i class="fas fa-crown"></i> Points de fidelité<br><small>avec la carte
                                 LeCoinLecture <span><i class="fas fa-id-card"></i></span></small></p>
                             </div>
                         </div>
@@ -111,16 +111,15 @@
                         <div class="card">
                             <div class="card-body">
                                 <h3 class="card-title">Titre: {{Nom}}</h3>
-                                <p class="card-text">
+                                <div class="card-text">
                                     <p class="font-weight-bold mb-0">Auteur: <span class="font-weight-normal">{{Auteur}} </span></p>
                                     <p class="font-weight-bold mb-0">Évaluation: <span id="rating" ng-bind-html="displayStars(Rating)"></span></p>
                                     <p class="font-weight-bold mb-0">Prix: <span class="font-weight-normal">{{Prix | euroFormat}} </span></p>
                                     <p class="font-weight-bold mb-0">Categorie: <span class="font-weight-normal">{{Categorie}} </span></p>
                                     <p class="font-weight-bold mb-0">Format: <span class="font-weight-normal">{{Format}}</span></p>
-                                    <p class="font-weight-bold mb-0">Nombre de pages: <span class="font-weight-normal">{{NrPages}} pages </span>
-                                    </p>
+                                    <p class="font-weight-bold mb-0">Nombre de pages: <span class="font-weight-normal">{{NrPages}} pages </span></p>
                                     <p class="font-weight-bold mb-0">Code: <span class="font-weight-normal">{{Code}}</span></p>
-                                </p>
+                                </div>
                             </div>
                         </div>
                     </div>
