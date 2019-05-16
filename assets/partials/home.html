@@ -20,3 +20,38 @@
         </div>
     </div>
 </div>
+<!-- modal -->
+<div class="addedArticle modal fade" id="exampleModal3" tabindex="-1" role="dialog"
+aria-labelledby="exampleModal3Label" aria-hidden="true">
+<div class="modal-dialog" role="document">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" id="exampleModal3Label"><span><i
+            class="far fa-check-circle tx6"></i></span> Ce produit a bien été ajouté à votre panier
+      </h5>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <div class="card mb-4" style="max-width: 1080px;">
+        <div class="row no-gutters">
+          <div class="col-12 col-md-4">
+            <img class="card-img p-2" src={{books[thisArticle].LienPhoto}} alt="books[thisArticle].Nom">
+          </div>
+          <div class="col-12 col-md-8">
+            <div class="card-body">
+              <p class="modalSize card-title text-secondary "> {{books[thisArticle].Nom}}</p>
+              <p class="auteur card-title text-primary">de {{books[thisArticle].Auteur}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button ng-click="gotoUrl('/cart/')" type="button" class="btn btn-primary" data-dismiss="modal">J'accède à mon panier</button>
+      <button ng-click="gotoUrl('/home/')" type="button" class="btn btn-success" data-dismiss="modal">Continuez vos achats</button>
+    </div>
+  </div>
+</div>
+</div>

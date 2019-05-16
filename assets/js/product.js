@@ -12,7 +12,5 @@ coinLectureApp.controller('productController', function ($scope, $routeParams, $
     $scope.NrPages = $rootScope.books[$scope.index].NrPages;
     $scope.Format = $rootScope.books[$scope.index].Format;
     $scope.Code = $rootScope.books[$scope.index].Code;
-    $scope.gotoUrl = function (url) {
-        $location.path(url);
-    };
+
 });
