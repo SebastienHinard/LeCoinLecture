@@ -5,7 +5,7 @@
         <div class="row">
             <div ng-repeat="content in books | filter : category" class="col-6 col-md-4 col-lg-3 my-2">
                 <div class="card shadow articleCard">
-                    <img class="img-responsive p-1 card-img-top" src={{content.LienPhoto}} alt="{{content.Nom}}">
+                    <img ng-click="gotoUrl('/product/'+$index)" class="img-responsive p-1 card-img-top" src={{content.LienPhoto}} alt="{{content.Nom}}">
                     <div class="card-body py-0">
                         <h5 class="card-title my-0 w-100" title="{{content.Nom }}"><small><b>{{content.Nom }}</b></small></h5>
                         <p class="card-text my-0" title="{{content.Auteur }}"><small><b>Auteur :</b>  {{content.Auteur}}</small></p>

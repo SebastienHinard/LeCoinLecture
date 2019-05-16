@@ -102,7 +102,9 @@ font-family: 'Nanum Pen Script', cursive;
     transition: .2s ease-in-out;
 }
 .articleCard:hover{
-    cursor: pointer;
     opacity: .8;
     transform: scale(1.02);
+}
+.articleCard img:hover{
+    cursor: pointer;
 }

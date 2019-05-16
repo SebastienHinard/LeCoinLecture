@@ -1,5 +1,8 @@
 //controller home
-coinLectureApp.controller('homeController', function ($rootScope,$scope, $http, $routeParams) {
+coinLectureApp.controller('homeController', function ($rootScope,$scope, $http, $routeParams, $location) {
+    $scope.gotoUrl=function(url){
+        $location.path(url);
+    };
   $scope.category = $routeParams.cat;
   console.log($scope.category);
   // Lorsque le boutton appelle la fct ajoutPanier
