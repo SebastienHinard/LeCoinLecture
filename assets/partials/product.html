@@ -1,5 +1,5 @@
 <!-- cette vue présente le détail du produit sélectionné -->
-<div ng-controller="productController" class=" rounded bg2 my-2 p-2">
+<div class="bg2 p-2">
   <div class=" rounded bg-light p-2">
     <!--Contenu du product  -->
     <h1 class="tx3 p-2 taille">Détails</h1>
@@ -16,9 +16,8 @@
               <p class="titre card-title font-weight-bold">{{Nom}}</p>
               <p class="auteur card-title text-primary">de {{Auteur}}</p>
               <hr>
-              <p class="text-primary"><i id="1" class="fas fa-star tx7"></i><i class="fas fa-star tx7"></i><i
-                  class="fas fa-star tx7"></i><i class="fas fa-star tx7"></i><i class="fas fa-star tx5"></i></span>
-                {{Rating}} étoiles</p>
+              <!-- Etoiles -->
+              <p id="rating" class="text-primary" ng-bind-html="displayStars(Rating)"></p>              
               <p class="font-weight-bold taille">{{Prix | euroFormat}} </p>
             </div>
             <hr>

@@ -1,5 +1,5 @@
 //declaration de l'app
-var coinLectureApp = angular.module('coinLectureApp', ['ngRoute']);
+var coinLectureApp = angular.module('coinLectureApp', ['ngRoute', 'ngSanitize']);
 coinLectureApp.run(function ($rootScope, $http, $rootScope) {
     //je récupère le JSON
     $http.get("assets/json/json.json")
@@ -72,4 +72,5 @@ coinLectureApp.controller('mainController', function ($rootScope, $scope, $http,
     $scope.gotoUrl = function (url) {
         $location.path(url);
     };
+    
 });

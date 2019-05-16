@@ -56,9 +56,9 @@
                         <div class="col-4 lead">Prix:</div>
                     </div>
                     <div ng-repeat="x in cartList" class="row p-2">
-                        <div class="col-4"><a href="#!product/{{x.id}}" style="color:black;"><small>{{ books[x.id].Nom }}</small></a></div>
-                        <div class="col-4"><small>{{ x.quantite }}</small></div>
-                        <div class="col-4"><small>{{books[x.id].Prix | euroFormat }}</small></div>
+                        <div class="col-4"><a href="#!product/{{x.id}}" style="color:black;">{{ books[x.id].Nom }}</a></div>
+                        <div class="col-4">{{ x.quantite }}</div>
+                        <div class="col-4">{{books[x.id].Prix | euroFormat }}</div>
                     </div>
                 </div>
                 <p class="text-right lead mt-5">Prix total: <span class="font-weight-bold">{{totalPrice() | euroFormat }}</span></p>
